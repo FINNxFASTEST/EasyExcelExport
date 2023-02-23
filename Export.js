@@ -48,7 +48,7 @@ function ExportExcel( column , data , file_name ){
             woorkbook.Sheets["sheet1"] = ws;                 
             var wopts = { bookType:'xlsx', bookSST:false, type:'array' };
             var wbout = XLSX.write(woorkbook,wopts);
-            ManualDownload(new Blob([wbout],{type:"application/octet-stream"}), file_name)
+            XLSX.writeFile(woorkbook, `${file_name}.xlsx`);
         }
         
     }catch(err){
