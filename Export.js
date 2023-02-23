@@ -65,7 +65,7 @@ function ManualDownload(file , file_name){
     a.remove();
 }
 
-function ExcalpleCall(){
+function ExampleCall(){
     var timeCode = moment().format('LL')
     let file_name = `Excample Name${timeCode}`
     const column = [
